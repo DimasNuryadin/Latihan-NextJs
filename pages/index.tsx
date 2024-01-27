@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <Layout pageTitle="Homepage">
       <Image src="/Profile.png" width={200} height={200} alt="Profile" />
-      <img src="/Profile.png" style={{ width: 200, height: 200 }} alt="Profile" />
       <h1 className={styles['title-homepage']}>Welcome Dimas</h1>
     </Layout>
   );
