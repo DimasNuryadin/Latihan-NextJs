@@ -24,6 +24,7 @@ export default function UserDetail(props: UserDetailProps) {
   )
 }
 
+// Get Static Paths
 export async function getStaticPaths() {
   const res = await fetch('https://jsonplaceholder.typicode.com/users');
   const dataUsers = await res.json();
