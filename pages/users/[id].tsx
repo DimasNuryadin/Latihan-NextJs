@@ -36,6 +36,7 @@ export async function getStaticPaths() {
   }));
   return {
     paths,
+    // jika tidak ada url yang ditemukan maka di larikan ke 404 page
     fallback: false,
   }
 }
@@ -45,6 +46,8 @@ interface GetStaticProps {
     id: string;
   }
 }
+
+// Untuk memberikan data untuk per masing2 user
 export async function getStaticProps(context: GetStaticProps) {
   const { id } = context.params;
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
